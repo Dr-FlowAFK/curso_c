@@ -1,13 +1,17 @@
 #include <stdio.h>
 
-int main(void) {
-    printf("\n------------------------------------------------\n\n");
-    printf("1 - logar 2 - cadastrar 3 - imprimir");
-    printf("\n----------------------------------------------\n\n");
-    printf("Valor retornado: %d",printf("Oi"));
+/*
+ * Ler numeros inteiros
+ *  aula 4
+ */
 
-    printf("\n Pressione qualquer tecla para finalizar \n");
-    getchar();
+int main(void) {
+
+    int valor; // criei uma variavel para guardar um valor do tipo inteiro
+    valor = 50;
+    printf("Digite um valor inteiro: ");
+    scanf("%d", &valor);
+    printf("valor = %d\n", valor);
 
     return 0;
 }
