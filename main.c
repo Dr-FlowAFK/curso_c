@@ -2,15 +2,18 @@
 
 /*
  * Ler dois caracteres
- *  aula 12
+ *  aula 14
  */
 
 int main(void) {
     char a, b;
 
-    printf("Digite duas letras: ");
-    scanf("%c %c", &a,&b);// espaço entre os %c -> comando para o computador desconsiderar o ENTER, TAB e o ESPAÇO
+    printf("Digite uma letra: ");
+    scanf("%c", &a);// espaço entre os %c -> comando para o computador desconsiderar o ENTER, TAB e o ESPAÇO
     //buffer => f\nf
+
+    printf("Digite outra letra: ");
+    scanf(" %c", &b);
     printf("caracter um: %c caracter dois: %c", a, b);
     return 0;
 }
