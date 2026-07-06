@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /*
- * Ler numeros inteiros
- *  aula 4
+ * Ler caracteres
+ *  aula 6
  */
 
 int main(void) {
@@ -16,6 +16,7 @@ int main(void) {
     return 0;
     */
 
+    /*
     //tipo nome
     float numero = 3.1415;
 
@@ -26,6 +27,18 @@ int main(void) {
     scanf("%f", &numero_ler);
 
     printf("\n Numero lido: %.2f", numero_ler);
+
+    return 0;
+    */
+
+    //tipo nome
+    char sexo;
+
+    printf("Digite seu sexo: (f, F. m ou M) ");
+    scanf("%c", &sexo);
+
+    printf("Valor da variavel sexo: %c\n", sexo);
+
 
     return 0;
 }
