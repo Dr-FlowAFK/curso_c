@@ -1,18 +1,16 @@
 #include <stdio.h>
 
 /*
- * Ler sexo, idade, peso e altura
- *  aula 11
+ * Ler dois caracteres
+ *  aula 12
  */
 
 int main(void) {
-    char sexo;
-    int idade;
-    float peso, altura;
+    char a, b;
 
-    printf("Digite sexo(f,F,m ou M) , idade, peso e altura:\n");
-    scanf("%c %d %f %f", &sexo,&idade,&peso,&altura);
-    printf("sexo: %c, idade: %d, peso: %f, altura: %f",sexo,idade,peso,altura);
-
+    printf("Digite duas letras: ");
+    scanf("%c %c", &a,&b);// espaço entre os %c -> comando para o computador desconsiderar o ENTER, TAB e o ESPAÇO
+    //buffer => f\nf
+    printf("caracter um: %c caracter dois: %c", a, b);
     return 0;
 }
