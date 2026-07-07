@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /*
-        Aula 26
-        operador de resto da divisao
+        Aula 27
+        operador de incremento ++
 */
 
 int main(void) {
-    int a = 10, b = 20;
-    // 10 / 20 r = 10
-    printf("\nResto da divisao de inteiro: %d", 10 % 20);
+    int contador = 10;
+
+    printf("\nValor: %d", ++contador);
 
     return 0;
 }
