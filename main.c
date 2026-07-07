@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 /*
-        Aula 27
-        operador de incremento ++
+    Aula 29
+    operador unsigned
+    trocar o %d por %u
+    limite para o tipo int: 2.147.483.647
 */
 
 int main(void) {
-    int contador = 10;
+    unsigned int x = 4294967295;  // 0 ... 4.294.967.295
+    int y = 2147483647;
 
-    // sinonimas
-    contador++;
-    contador += 1;
-    contador = contador + 1;
-    printf("\nValor: %d", ++contador);
+    printf("x = %u\n", x);
+    printf("y = %d\n", y);
 
     return 0;
 }
