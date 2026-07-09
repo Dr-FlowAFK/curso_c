@@ -4,8 +4,7 @@
 #include <time.h>
 
 /*
-    Aula 129: Lendo uma String com a função scanf()
-    scanf("%80[^\n]", str);
+    Aula 130: Lendo uma String com a função gets()
 */
 
 int main() {
@@ -14,7 +13,8 @@ int main() {
     printf("%s\n", palavras);
 
     printf("Digite seu nome: ");
-    scanf("%10[^\n]",palavras);
+    //scanf("%10[^\n]",palavras);
+    gets(palavras);
 
     printf("%s\n", palavras);
 
