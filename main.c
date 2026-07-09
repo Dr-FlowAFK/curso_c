@@ -4,12 +4,17 @@
 #include <time.h>
 
 /*
-    Aula 128: O que é uma String?
+    Aula 129: Lendo uma String com a função scanf()
+    scanf("%80[^\n]", str);
 */
 
 int main() {
 
-    char palavras[] = {"oi"};
+    char palavras[10];
+    printf("%s\n", palavras);
+
+    printf("Digite seu nome: ");
+    scanf("%10[^\n]",palavras);
 
     printf("%s\n", palavras);
 
