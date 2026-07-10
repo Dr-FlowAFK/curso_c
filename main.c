@@ -2,24 +2,18 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <time.h>
+#include <string.h>
 
 /*
-    Aula 133: Como descobrir o tamanho de uma String?
+    Aula 134: Descobrindo o tamanho de uma String com a função strlen()
 */
 
 int main() {
-    int i,tam = 0;
+
     char palavras[13] = {"apenas teste"};
     printf("%s\n", palavras);
 
-    i = 0;
-    while (palavras[i] != '\0') {
-        //printf("%c", palavras[i++]);
-        tam++;
-        i++;
-    }
-
-    printf("tamanho de palavras: %d\n", tam);
+    printf("tamanho de palavras: %d\n", strlen(palavras));
     printf("\n");
 
 
