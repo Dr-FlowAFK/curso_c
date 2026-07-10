@@ -4,25 +4,22 @@
 #include <time.h>
 
 /*
-    Aula 132: Como identificar o fim de uma String?
+    Aula 133: Como descobrir o tamanho de uma String?
 */
 
 int main() {
-    int i;
-    char palavras[12] = {"apenas teste"};
+    int i,tam = 0;
+    char palavras[13] = {"apenas teste"};
     printf("%s\n", palavras);
 
-    //printf("Digite seu nome: ");
-    //scanf("%10[^\n]",palavras);
-    //gets(palavras);
-    //fgets(palavras, 10, stdin);
     i = 0;
     while (palavras[i] != '\0') {
-        printf("%c", palavras[i++]);
+        //printf("%c", palavras[i++]);
+        tam++;
+        i++;
     }
-    // for(i=0;i<12;i++) {
-    //     printf("%d %d\n",i, palavras[i]);
-    // }
+
+    printf("tamanho de palavras: %d\n", tam);
     printf("\n");
 
 
