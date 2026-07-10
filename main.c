@@ -5,15 +5,16 @@
 #include <string.h>
 
 /*
-    Aula 135: Como concatenar duas Strings com a função strcat()?
+    Aula 137: Como copiar uma string em C com a função strcpy()?
 */
 
 int main() {
 
     char palavras[50] = {"apenas"};
     char palavras2[20] = {" palavras teste"};
-    strcat(palavras,palavras2);
-    printf("%s\n",palavras);
+    //strcat(palavras,palavras2);
+    strcpy(palavras,palavras2);
+    printf("\n Resultado: %s\n",palavras);
 
     return 0;
 }
