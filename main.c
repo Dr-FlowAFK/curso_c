@@ -5,20 +5,25 @@
 #include <string.h>
 
 /*
-    Aula 141: Como dividir uma String em tokens com a função strtok()?
+    Aula 142: Matriz de Strings na linguagem de programação C
 */
 
 int main() {
 
-    char palavra[50] = {"Bom dia simpatia!"};
-    char *ponteiro;
+    char nomes[5][50];
+    int l;
 
-    ponteiro = strtok(palavra, " ");
-
-    while (ponteiro != NULL) {
-        printf("token: %s\n", ponteiro);
-        ponteiro = strtok(NULL, " ");
+    for (l = 0; l < 5; l++) {
+        printf("Digite o nome da posiçao %d. ",l);
+        fgets(nomes[l], 50, stdin);
+        //scanf("%50[^\n]",nomes[l]);
+        //scanf("%c");
     }
+
+    for (l = 0; l < 5; l++) {
+        printf("%s", nomes[l]);
+    }
+
 
     return 0;
 }
