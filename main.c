@@ -5,16 +5,20 @@
 #include <string.h>
 
 /*
-    Aula 137: Como copiar uma string em C com a função strcpy()?
+    Aula 138: Procurando caracteres em uma String com as funções strchr e strrchr
+    strchr  -> retorna a primeira ocorrência
+    strrchr -> retorna a última ocorrência
 */
 
 int main() {
 
-    char palavras[50] = {"apenas"};
-    char palavras2[20] = {" palavras teste"};
-    //strcat(palavras,palavras2);
-    strcpy(palavras,palavras2);
-    printf("\n Resultado: %s\n",palavras);
+    char palavra[50] = {"apenas"};
+    char *letra;
+
+    letra = strchr(palavra,'a');
+
+    printf("\n Resultado: %c\n",*letra);
+    printf("\n Resultado comfirmacao: %c\n",*(letra + 1));
 
     return 0;
 }
