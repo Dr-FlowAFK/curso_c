@@ -5,21 +5,15 @@
 #include <string.h>
 
 /*
-    Aula 139: Como encontrar uma substring com a função strstr()
+    Aula 140: Converter String para maiúsculo ou minúsculo com strupr e strlwr
 */
 
 int main() {
 
     char palavra[50] = {"Bom dia simpatia!"};
-    char str[] = {"dia"};
-    char *ponteiro;
 
-    ponteiro = strstr(palavra, str);
-
-    if (ponteiro != NULL) {
-        printf("%c\n", *ponteiro);
-    }
-
-
-        return 0;
+    strlwr(palavra);
+    strupr(palavra);
+    printf("%s\n", palavra);
+    return 0;
 }
