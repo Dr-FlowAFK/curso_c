@@ -5,21 +5,23 @@
 #include <string.h>
 #include <math.h>
 /*
-    Aula 155:    Como calcular o fatorial com recursão?
+    Aula 157:    Calcular o enésimo termo da sequência de FIBONACCI com recursão
 */
 
-int fatorial(int n) {
-    if (n == 0 || n == 1) {
+int fibonacci(int n) {
+    if (n == 1) {
+        return 0;
+    }else if (n == 2) {
         return 1;
     }else {
-        return n * fatorial(n - 1);
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
-};
+}
 
 int main() {
     int n;
-    printf("Digite um numero positivo: ");
+    printf("Digite um numero: ");
     scanf("%d",&n);
-    printf("Fatorial de numeros: %u",fatorial(n));
+    printf("Fibonacci de numeros: %d\n",fibonacci(n));
     return 0;
 }
