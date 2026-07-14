@@ -5,7 +5,7 @@
 #include <string.h>
 #include <math.h>
 /*
-    Aula 149:   Procedimento imprimir matriz. Função para somar linha da matriz
+    Aula 150:    Função que calcule e retorne a soma de uma coluna da matriz
 */
 int tam = 5;
 void imprimir(int m[][5]) {
@@ -26,6 +26,14 @@ int somar_linha(int m[][5],int l) {
     return soma;
 }
 
+int somar_coluna(int m[][5],int c) {
+    int l, soma = 0;
+    for (l=0;l<tam;l++) {
+        soma += m[l][c];
+    }
+    return soma;
+}
+
 int main() {
     int mat[5][5];
     int i,j;
@@ -37,6 +45,9 @@ int main() {
     }
 
     imprimir(mat);
-    printf("Soma da linha 0: %d",somar_linha(mat,0));
+    printf("Soma da linha 0: %d\n ",somar_linha(mat,0));
+
+    imprimir(mat);
+    printf("\n Soma da coluna 0: %d",somar_coluna(mat,0));
     return 0;
 }
