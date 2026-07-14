@@ -3,31 +3,40 @@
 #include <locale.h>
 #include <time.h>
 #include <string.h>
-
+#include <math.h>
 /*
-    Aula 147:  Procedimento para imprimir uma string caracter por caracter 
+    Aula 149:   Procedimento imprimir matriz. Função para somar linha da matriz
 */
-
-int minha_strlem(char str[]) {
-    int tam = 0;
-    while (str[tam] != '\0') {
-        tam++;
+int tam = 5;
+void imprimir(int m[][5]) {
+    int i,j;
+    for (i=0;i<tam;i++) {
+        for (j=0;j<tam;j++) {
+            printf("%2d ",m[i][j]);
+        }
+        printf("\n");
     }
-    return tam;
 }
 
-void imprimir_string(char str[]) {
-    int i = 0;
-    while (str[i] != '\0') {
-        printf("%c", str[i++]);
+int somar_linha(int m[][5],int l) {
+    int c, soma = 0;
+    for (c=0;c<tam;c++) {
+        soma += m[l][c];
     }
-    printf("\n");
+    return soma;
 }
 
 int main() {
-    char vet[20] = {"Ola"};
-    printf("%d\n", strlen(vet));
-    printf("%d\n", minha_strlem(vet));
-    imprimir_string(vet);
+    int mat[5][5];
+    int i,j;
+    srand(time(NULL));
+    for (i=0;i<tam;i++) {
+        for (j=0;j<tam;j++) {
+            mat[i][j] = rand() % 10;
+        }
+    }
+
+    imprimir(mat);
+    printf("Soma da linha 0: %d",somar_linha(mat,0));
     return 0;
 }
