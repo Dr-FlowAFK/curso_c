@@ -5,7 +5,7 @@
 #include <string.h>
 #include <math.h>
 /*
-    Aula 169: Posso usar uma STRUCT dentro de outra STRUCT?
+    Aula 172: Como passar uma struct como parâmetro para um procedimento?
 */
 typedef struct nascimento {
     int dia, mes, ano;
@@ -18,9 +18,23 @@ typedef struct pessoa{
     char nome[30];
 }Pessoa;
 
+void imprimir_pessoa(Pessoa pessoa) {
+    printf("Nome: %s \n",pessoa.nome);
+    printf("Sexo: %c\n",pessoa.sexo);
+    printf("Data de nascimento: %d/%d/%d \n",pessoa.data_nascimento.dia,pessoa.data_nascimento.mes
+        ,pessoa.data_nascimento.ano);
+    printf("Idade: ",pessoa.idade);
+}
+
 int main() {
     Pessoa pessoa1;
     struct pessoa pessoa2;
+
+    pessoa2.idade = 20;
+    pessoa2.sexo = 'M';
+    strcpy(pessoa2.nome, "Snow");
+
+    imprimir_pessoa(pessoa2);
 
     printf("Digite seu nome: \n");
     fgets(pessoa1.nome,30,stdin);
@@ -36,14 +50,7 @@ int main() {
 
 
 
-    pessoa2.idade = 20;
-    pessoa2.sexo = 'M';
-    strcpy(pessoa2.nome, "Snow");
 
-    printf("Pessoa 1\n Nome: %s\n Idade: %d\n Sexo: %c\n",pessoa1.nome,pessoa1.idade,pessoa1.sexo);
-    printf(" Data de nascimento: %d/%d/%d \n",pessoa1.data_nascimento.dia,pessoa1.data_nascimento.mes,
-        pessoa1.data_nascimento.ano);
-    printf("Pessoa 2\n Nome: %s\n Idade: %d\n Sexo: %c\n",pessoa2.nome,pessoa2.idade,pessoa2.sexo);
 
 
     return 0;
