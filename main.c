@@ -5,25 +5,27 @@
 #include <string.h>
 #include <math.h>
 /*
-    Aula 167: Como criar tipos de dados em C com TYPEDEF STRUCT?
+    Aula 168: Como preencher uma STRUCT com dados lidos do teclado?
 */
-typedef struct {
+typedef struct pessoa{
     int idade;
     char sexo;
     char nome[30];
 }Pessoa;
-struct pessoa {
-    int idade;
-    char sexo;
-    char nome[30];
-};
+
 int main() {
     Pessoa pessoa1;
     struct pessoa pessoa2;
 
-    pessoa1.idade = 20;
-    pessoa1.sexo = 'M';
-    strcpy(pessoa1.nome, "Joh");
+    printf("Digite seu nome: \n");
+    fgets(pessoa1.nome,30,stdin);
+    
+    printf("Digite sua idade: \n");
+    scanf("%d",&pessoa1.idade);
+    scanf("%c");
+
+    printf("Digite seu sexo (f, f, M, m) : \n");
+    scanf("%c",&pessoa1.sexo);
 
     pessoa2.idade = 20;
     pessoa2.sexo = 'M';
