@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
-#include <time.h>
-#include <string.h>
-#include <math.h>
-/*
-    Aula 187: Ponteiro como parâmetro para uma função ou procedimento
-*/
-void imprimir(int *num) {
-    printf("%d\n", *num);
-    *num = 10;
+
+// Aula 189: Aritmética de ponteiros com vetor.
+
+void imprimir(int vet[], int tam) {
+    int i;
+    for (i = 0; i < tam; i++)
+        printf("%d ", *(vet + i));
+    printf("\n");
 }
+
 int main() {
-    int idade = 35;
-    imprimir(&idade);
-    printf("\nidade = %d\n", idade);
+
+    int vet[10] = {45, 89, 68, 25, 17, 76, 34, 29, 57, 44};
+
+    imprimir(vet, 10);
+
     return 0;
 }
