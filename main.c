@@ -1,20 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Aula 189: Aritmética de ponteiros com vetor.
 
-void imprimir(int vet[], int tam) {
+/*
+        Aula 192: Exercicio 1
+
+    1) Escreva um procedimento que receba um vetor inteiro, seu tamanho e os endereços
+    de duas variáveis inteiras, menor e maior, salve nestas variáveis o menor e o maior
+    valor do vetor.
+*/
+void maior_menor(int *vet,int tam, int *menor, int *maior) {
     int i;
-    for (i = 0; i < tam; i++)
-        printf("%d ", *(vet + i));
-    printf("\n");
+    *menor = *vet;
+    *maior = *vet;
+    for (i=1;i<tam;i++) {
+        if (*menor > *(vet + i)) {
+            *menor = *(vet + i);
+        }
+        if (*maior < *(vet + i)) {
+            *maior = *(vet + i);
+        }
+    }
 }
-
 int main() {
+    int menor,maior, v[10] = {34,234,34,12,4,5435,324,45,43,133};
+    printf("Maior valor: %d\n",maior);
+    printf("Menor valor: %d\n",menor);
 
-    int vet[10] = {45, 89, 68, 25, 17, 76, 34, 29, 57, 44};
+    maior_menor(v,10,&menor,&maior);
 
-    imprimir(vet, 10);
+    printf("Maior valor: %d\n",maior);
+    printf("Menor valor: %d\n",menor);
 
     return 0;
 }
